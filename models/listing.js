@@ -1,22 +1,21 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const listingSchema = new Schema ({
+const listingSchema = new Schema({
   title: {
     type: String,
     required: true,
   },
   description: String,
-  image: { 
+  image: {
     type: String,
-    default :
-      "https://unsplash.com/photos/white-and-grey-concrete-building-near-swimming-pool-under-clear-sky-during-daytime-2d4lAQAlbDA",
-    set: (v) => v === ""? "default link" : "https://unsplash.com/photos/white-and-grey-concrete-building-near-swimming-pool-under-clear-sky-during-daytime-2d4lAQAlbDA",
+    default: "https://images.unsplash.com/photo-1766834123530-8a58354b43ac?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    set: (v) => v === "" ? "https://images.unsplash.com/photo-1766834123530-8a58354b43ac?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" : v,
   },
   price: Number,
   location: String,
-  country: String,
+  country: String, 
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
-module.exports = Listing;   
+module.exports = Listing;
