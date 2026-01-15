@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --node-args=\"--no-deprecation\" app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,12 @@
   },
   "homepage": "https://github.com/Saifurrahman21/Air_bnb#readme",
   "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.7",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^5.2.1",
+    "express-session": "^1.18.2",
     "joi": "^18.0.2",
     "method-override": "^3.0.0",
     "mongoose": "^9.1.2"
