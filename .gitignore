@@ -12,6 +12,3 @@ yarn-error.log*
 # OS files for mac users
 .DS_Store
 Thumbs.db
-
-#cloud
-cloudConfig.js
